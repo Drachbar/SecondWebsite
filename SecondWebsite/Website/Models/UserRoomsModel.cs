@@ -4,18 +4,18 @@ namespace Website.Models
 {
     public class UserRoomsModel
     {
-        public IdentityUser? User { get; set; }
+        public int UserId { get; set; }
 
-        readonly List<ChatRoomModel> chatRooms = new();
+        readonly List<int> chatRoomsId = new();
 
-        public void AddChatRoom(ChatRoomModel chatRoom)
+        public void AddChatRoom(int chatRoomId)
         {
-            chatRooms.Add(chatRoom);
+            chatRoomsId.Add(chatRoomId);
         }
 
-        public List<ChatRoomModel> GetAllChatRooms()
+        public List<int> GetAllChatRooms()
         {
-            return chatRooms;
+            return chatRoomsId;
         }
     }
 }

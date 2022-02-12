@@ -5,15 +5,15 @@ namespace Website.Models
 {
     public class ChatRoomModel
     {
-        readonly List<IdentityUser> Users = new();
+        readonly List<int> UserIds = new();
         public int Id { get; set; }
-        public void AddUser(IdentityUser user)
+        public void AddUser(int userId)
         {
-            Users.Add(user);
+            UserIds.Add(userId);
         }
-        public List<IdentityUser> GetAllUsers()
+        public List<int> GetAllUsers()
         {
-            return Users;
+            return UserIds;
         }
     }
 }
