@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace Website.Models
 {
-    public class UserRoomsModel
+    public class UserRooms
     {
+        [Key]
         public int UserId { get; set; }
 
-        readonly List<int> chatRoomsId = new();
+        List<int> chatRoomsId = new();
 
         public void AddChatRoom(int chatRoomId)
         {
@@ -18,7 +20,7 @@ namespace Website.Models
             return chatRoomsId;
         }
 
-        public UserRoomsModel()
+        public UserRooms()
         {
 
         }

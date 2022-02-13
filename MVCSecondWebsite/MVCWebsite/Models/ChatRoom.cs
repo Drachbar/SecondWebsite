@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Website.Models
 {
-    public class ChatRoomModel
+    public class ChatRoom
     {
         readonly List<int> UserIds = new();
         public int Id { get; set; }
@@ -16,7 +16,7 @@ namespace Website.Models
             return UserIds;
         }
 
-        public ChatRoomModel()
+        public ChatRoom()
         {
 
         }

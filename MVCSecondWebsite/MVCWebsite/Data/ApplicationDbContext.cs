@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Website.Models;
 
 namespace MVCWebsite.Data
 {
@@ -9,5 +10,8 @@ namespace MVCWebsite.Data
             : base(options)
         {
         }
+        public DbSet<ChatMessage>? ChatMessagesModel { get; set; }
+        public DbSet<Website.Models.ChatRoom> ChatRoom { get; set; }
+        public DbSet<Website.Models.UserRooms> UserRooms { get; set; }
     }
 }
