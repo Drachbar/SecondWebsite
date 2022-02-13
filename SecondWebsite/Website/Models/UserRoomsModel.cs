@@ -17,5 +17,10 @@ namespace Website.Models
         {
             return chatRoomsId;
         }
+
+        public UserRoomsModel()
+        {
+
+        }
     }
 }
