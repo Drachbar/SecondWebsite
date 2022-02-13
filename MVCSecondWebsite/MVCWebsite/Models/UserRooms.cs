@@ -8,7 +8,7 @@ namespace Website.Models
         [Key]
         public int UserId { get; set; }
 
-        List<int> chatRoomsId = new();
+        readonly List<int> chatRoomsId = new();
 
         public void AddChatRoom(int chatRoomId)
         {
