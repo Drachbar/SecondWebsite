@@ -265,17 +265,23 @@ namespace MVCWebsite.Data.Migrations
                     b.ToTable("ChatRoom");
                 });
 
-            modelBuilder.Entity("Website.Models.UserRooms", b =>
+            modelBuilder.Entity("Website.Models.UserChatRoom", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.HasKey("UserId");
+                    b.Property<int>("ChatRoomId")
+                        .HasColumnType("int");
 
-                    b.ToTable("UserRooms");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserChatRoom");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

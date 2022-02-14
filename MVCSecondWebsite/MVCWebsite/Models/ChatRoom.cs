@@ -5,8 +5,10 @@ namespace Website.Models
 {
     public class ChatRoom
     {
-        readonly List<int> UserIds = new();
         public int Id { get; set; }
+
+        readonly List<int> UserIds = new();
+
         public void AddUser(int userId)
         {
             UserIds.Add(userId);

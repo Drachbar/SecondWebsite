@@ -12,6 +12,6 @@ namespace MVCWebsite.Data
         }
         public DbSet<ChatMessage>? ChatMessagesModel { get; set; }
         public DbSet<Website.Models.ChatRoom> ChatRoom { get; set; }
-        public DbSet<Website.Models.UserRooms> UserRooms { get; set; }
+        public DbSet<Website.Models.UserChatRoom> UserChatRoom { get; set; }
     }
 }
